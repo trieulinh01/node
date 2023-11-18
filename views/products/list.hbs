@@ -1,0 +1,18 @@
+<div class="mt-4">
+    <div class="row pt-5 pb-5 flex gap-10 justify-between">
+        {{#each products}}
+            <div class="cardItem ">
+                <div class="cardItem-new">new</div>
+                <div class="cardItem-img">
+                    <a href="/products/{{this.slug}}"><img src="{{this.images.[0]}}" alt="{{this.productName}}" /></a>
+                </div>
+                <div class="cardItem-discount">0%</div>
+                <div class="cardItem-info">
+                    <a href="/products/{{this.slug}}"><h3>{{this.productName}}</h3></a>
+                    <p>{{this.sale_price}}đ<span>{{this.price}}</span></p>
+                    <div class="btn-order">ĐẶT HÀNG</div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
