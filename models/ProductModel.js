@@ -8,6 +8,7 @@ const Product = new Schema({
   image: { type: String, maxLength: 255 },
   price: { type: Number },
   sale_price: { type: Number },
+  category: { type: Schema.Types.ObjectId, maxLength: 255,ref:"Category" }, 
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });

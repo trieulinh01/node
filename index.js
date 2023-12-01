@@ -4,6 +4,8 @@ const { engine } = require("express-handlebars");
 const methodOverride = require("method-override");
 const app = express();
 const port = 3000;
+
+
 // app.use(express.urlencoded());
 // middleware
 app.use(
@@ -12,7 +14,7 @@ app.use(
   })
 );
 app.use(express.json());
-app.use(methodOverride('_method'));
+app.use(methodOverride("_method"));
 // đường dãn ảnh
 app.use(express.static(path.join(__dirname, "public")));
 // Template engine

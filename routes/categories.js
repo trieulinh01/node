@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const UsersController = require("../controllers/CategoriesController");
+router.get("/", UsersController.getAllCategories);
+router.get("/:id", UsersController.getCategoryDetail);
+router.post("/", UsersController.createCategory);
+router.put("/:id", UsersController.editCategory);
+router.post("/login", UsersController.loginUser);
+router.delete("/:id", UsersController.deleteCategory);
+module.exports = router;
